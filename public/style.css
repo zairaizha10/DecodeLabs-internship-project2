@@ -1,0 +1,344 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:#f5f7fb;
+color:#222;
+display:flex;
+min-height:100vh;
+transition:.3s;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+width:260px;
+background:linear-gradient(
+180deg,
+#0f172a,
+#1e293b
+);
+color:white;
+padding:20px;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+}
+
+.logo{
+font-size:24px;
+font-weight:700;
+display:flex;
+gap:12px;
+align-items:center;
+margin-bottom:40px;
+}
+
+.sidebar ul{
+list-style:none;
+}
+
+.sidebar li{
+padding:15px;
+margin-bottom:10px;
+border-radius:12px;
+cursor:pointer;
+transition:.3s;
+}
+
+.sidebar li:hover{
+background:rgba(255,255,255,.1);
+}
+
+.sidebar li.active{
+background:#6366f1;
+}
+
+.sidebar li i{
+margin-right:10px;
+}
+
+.sidebar-footer{
+margin-top:50px;
+font-size:14px;
+opacity:.8;
+}
+
+/* MAIN */
+
+.main{
+flex:1;
+padding:30px;
+}
+
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:30px;
+}
+
+.topbar h1{
+font-size:36px;
+margin-bottom:5px;
+}
+
+.topbar p{
+color:#777;
+}
+
+#themeBtn{
+border:none;
+padding:12px 18px;
+font-size:18px;
+cursor:pointer;
+border-radius:10px;
+background:#6366f1;
+color:white;
+}
+
+/* STATS */
+
+.stats{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+margin-bottom:30px;
+}
+
+.stat-card{
+background:white;
+padding:25px;
+border-radius:16px;
+box-shadow:
+0 4px 12px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.stat-card:hover{
+transform:translateY(-5px);
+}
+
+.stat-card h3{
+font-size:32px;
+margin-bottom:8px;
+}
+
+.stat-card p{
+color:#666;
+}
+
+/* FORM */
+
+.form-card{
+background:white;
+padding:25px;
+border-radius:16px;
+box-shadow:
+0 4px 12px rgba(0,0,0,.08);
+margin-bottom:30px;
+}
+
+.form-card h2{
+margin-bottom:20px;
+}
+
+.form-grid{
+display:grid;
+grid-template-columns:
+2fr 2fr 1fr 1fr;
+gap:15px;
+}
+
+.form-grid input,
+.form-grid select{
+padding:14px;
+border:1px solid #ddd;
+border-radius:10px;
+font-size:16px;
+}
+
+.form-grid button{
+background:#6366f1;
+border:none;
+color:white;
+border-radius:10px;
+cursor:pointer;
+font-size:16px;
+}
+
+/* TOOLBAR */
+
+.toolbar{
+display:flex;
+gap:15px;
+margin-bottom:25px;
+}
+
+.toolbar input{
+flex:1;
+padding:14px;
+border-radius:10px;
+border:1px solid #ddd;
+}
+
+.toolbar button{
+padding:14px 22px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+background:#6366f1;
+color:white;
+}
+
+/* APPLICATION CARDS */
+
+#applications{
+display:grid;
+gap:20px;
+}
+
+.application-card{
+background:white;
+padding:20px;
+border-radius:16px;
+box-shadow:
+0 4px 12px rgba(0,0,0,.08);
+}
+
+.application-card h3{
+font-size:22px;
+margin-bottom:10px;
+}
+
+.application-card p{
+margin-bottom:8px;
+}
+
+.actions{
+margin-top:15px;
+display:flex;
+gap:10px;
+}
+
+.actions button{
+padding:10px 14px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+.delete-btn{
+background:#ef4444;
+color:white;
+}
+
+.update-btn{
+background:#10b981;
+color:white;
+}
+
+/* STATUS BADGES */
+
+.badge{
+padding:6px 12px;
+border-radius:20px;
+font-size:14px;
+font-weight:600;
+display:inline-block;
+}
+
+.applied{
+background:#dbeafe;
+color:#1d4ed8;
+}
+
+.interview{
+background:#fed7aa;
+color:#c2410c;
+}
+
+.selected{
+background:#dcfce7;
+color:#15803d;
+}
+
+.rejected{
+background:#fee2e2;
+color:#b91c1c;
+}
+
+/* DARK MODE */
+
+.dark{
+background:#0f172a;
+color:white;
+}
+
+.dark .main{
+background:#0f172a;
+}
+
+.dark .stat-card,
+.dark .form-card,
+.dark .application-card{
+background:#1e293b;
+color:white;
+}
+
+.dark input,
+.dark select{
+background:#334155;
+color:white;
+border:none;
+}
+
+.dark .toolbar input{
+background:#334155;
+color:white;
+}
+
+.dark p{
+color:#cbd5e1;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+
+.form-grid{
+grid-template-columns:1fr;
+}
+
+.topbar{
+flex-direction:column;
+align-items:flex-start;
+gap:20px;
+}
+
+.sidebar{
+display:none;
+}
+
+.main{
+width:100%;
+}
+
+}
+
+@media(max-width:600px){
+
+.stats{
+grid-template-columns:1fr;
+}
+
+.toolbar{
+flex-direction:column;
+}
+
+}

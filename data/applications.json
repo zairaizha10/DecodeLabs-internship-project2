@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1781414521865,
+    "company": "Microsoft",
+    "role": "SDE Intern",
+    "status": "Rejected",
+    "date": "14/6/2026"
+  },
+  {
+    "id": 1781414608870,
+    "company": "Microsoft",
+    "role": "SDE Intern",
+    "status": "Applied",
+    "date": "14/6/2026"
+  },
+  {
+    "id": 1781415071736,
+    "company": "Google",
+    "role": "SDE Intern",
+    "status": "Applied",
+    "date": "14/6/2026"
+  }
+]

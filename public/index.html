@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Internship Tracker Pro</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo">
+<i class="fa-solid fa-briefcase"></i>
+<span>Internship Tracker</span>
+</div>
+
+<ul>
+
+<li onclick="showDashboard()">
+<i class="fa-solid fa-house"></i>
+Dashboard
+</li>
+
+<li onclick="showApplications()">
+<i class="fa-solid fa-file"></i>
+Applications
+</li>
+
+<li onclick="showStatistics()">
+<i class="fa-solid fa-chart-column"></i>
+Statistics
+</li>
+
+<li onclick="showApiDocs()">
+<i class="fa-solid fa-book"></i>
+API Docs
+</li>
+
+</ul>
+
+<div class="sidebar-footer">
+<p>Made with ❤️ by Zaira</p>
+</div>
+
+</div>
+
+<div class="main">
+
+<div class="topbar">
+
+<div>
+<h1>Internship Tracker Dashboard</h1>
+<p>Track and manage all your internship applications</p>
+</div>
+
+<button id="themeBtn">🌙</button>
+
+</div>
+
+<!-- STATISTICS -->
+
+<div id="statistics-section">
+
+<h2>Statistics</h2>
+
+<div id="stats" class="stats"></div>
+
+</div>
+
+<!-- FORM -->
+
+<div class="form-card">
+
+<h2>➕ Add New Application</h2>
+
+<div class="form-grid">
+
+<input
+id="company"
+placeholder="Company Name">
+
+<input
+id="role"
+placeholder="Role / Position">
+
+<select id="status">
+<option>Applied</option>
+<option>Interview</option>
+<option>Selected</option>
+<option>Rejected</option>
+</select>
+
+<button onclick="addApplication()">
+Add Application
+</button>
+
+</div>
+
+</div>
+
+<!-- SEARCH -->
+
+<div class="toolbar">
+
+<input
+id="search"
+placeholder="Search company">
+
+<button onclick="searchCompany()">
+Search
+</button>
+
+<button onclick="resetSearch()">
+Reset
+</button>
+
+</div>
+
+<!-- APPLICATIONS -->
+
+<div id="applications-section">
+
+<h2>Applications</h2>
+
+<div id="applications"></div>
+
+</div>
+
+<!-- API DOCS -->
+
+<div
+id="api-section"
+style="display:none;">
+
+<h2>API Documentation</h2>
+
+<div class="application-card">
+
+<h3>Available Endpoints</h3>
+
+<p><strong>GET</strong> /api/applications</p>
+
+<p><strong>GET</strong> /api/applications?company=Microsoft</p>
+
+<p><strong>POST</strong> /api/applications</p>
+
+<p><strong>PUT</strong> /api/applications/:id</p>
+
+<p><strong>DELETE</strong> /api/applications/:id</p>
+
+<p><strong>GET</strong> /api/stats</p>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
